@@ -32,7 +32,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}  #Se usa el token de Dockerhub encontrado también en secrets.
 
       - name: Push Docker image to DockerHub
-        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/my-java-image:latest //hace push de la imagen a dockerhub
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/my-java-image:latest #hace push de la imagen a dockerhub
 
   test:
     runs-on: ubuntu-latest
