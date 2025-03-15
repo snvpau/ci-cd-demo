@@ -1,2 +1,8 @@
+<<<<<<< HEAD
 werkzeug==2.3.8
 Flask==2.2.3
+=======
+Flask==2.2.3
+Werkzeug==2.2.3
+pytest==8.3.5
+>>>>>>> 40dab36 (werkzeug, pytest)
