@@ -9,12 +9,12 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@SpringBootTest
-@AutoConfigureMockMvc
+@SpringBootTest //test de integracion 
+@AutoConfigureMockMvc //configura un mockmvc para hacer pruebas en end points web 
 class SpringBootAppApplicationTests {
 
     @Autowired
-    private MockMvc mockMvc;
+    private MockMvc mockMvc; //realizar solicitudes http en pruebas 
 
     @Test
     void contextLoads() {
@@ -22,7 +22,7 @@ class SpringBootAppApplicationTests {
 
     @Test
     void testHelloEndpoint() throws Exception {
-        // Realiza una solicitud GET a la ruta "/"
+        // Realiza una solicitud get a la ruta "/"
         mockMvc.perform(get("/hello"))
                 .andExpect(status().isOk()) 
                 .andExpect(content().string("Hello World!")); 
